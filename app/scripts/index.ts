@@ -1,8 +1,5 @@
-import 'styles/base';
+/*
 
-import HomePage from './homePage';
+    This file serves as an entry point for the project and does nothing
 
-const homePage = new HomePage();
-
-homePage.sayHi('Nick');
-
+*/

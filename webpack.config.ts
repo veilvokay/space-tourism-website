@@ -7,6 +7,11 @@ import CssMinimizerWebpackPlugin from 'css-minimizer-webpack-plugin';
 import TerserWebpackPlugin from 'terser-webpack-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 
+const pages = {
+    homePage: 'index',
+    crewPilot: 'crew-pilot',
+};
+
 const isProd = process.env.NODE_ENV === 'production';
 const isDev = process.env.NODE_ENV === 'development';
 
@@ -54,13 +59,29 @@ const optimization = () => {
 };
 
 const plugins = () => {
+
+    const pagesArr = Object.entries(pages).map(
+        (page) => {
+            return new HTMLWebpackPlugin({
+                // inject: true,
+                template: `./html/${page[1]}.html`,
+                filename: `${page[1]}.html`,
+                chunks: [page[0]],
+                minify: {
+                    collapseWhitespace: isProd,
+                },
+            });
+        }
+    );
+
     const base = [
-        new HTMLWebpackPlugin({
-            template: './index.html',
-            minify: {
-                collapseWhitespace: isProd,
-            },
-        }),
+        // new HTMLWebpackPlugin({
+        //     template: './html/index.html',
+        //     minify: {
+        //         collapseWhitespace: isProd,
+        //     },
+        // }),
+        ...pagesArr,
         new CleanWebpackPlugin(),
         new CopyWebpackPlugin({
             patterns: [
@@ -82,13 +103,18 @@ const plugins = () => {
     return base;
 };
 
+Object.keys(pages).reduce((config, page) => {
+    config[page] = `./scripts/${page}.ts`;
+    return config;
+}, {});
+
 module.exports = {
     context: Path.resolve(__dirname, 'app'),
     mode: 'development',
-    entry: {
-        main: './scripts/index.ts',
-        // newEntryPoint: './scripts/newEntryPoint.ts',
-    },
+    entry: Object.keys(pages).reduce((config, page) => {
+        config[page] = `./scripts/${page}.ts`;
+        return config;
+    }, {}),
     output: {
         filename: filename('js'),
         path: Path.resolve(__dirname, 'dist'),
