@@ -23,51 +23,75 @@
 @mixin title-h3
 	@include create-style(var(--color-white), var(--sub-font), var(--font-size-h3), var(--font-weight-4), var(--letter-spacing-h3), var(--line-height-h3))
 
-@mixin desc-1
-	@include create-style(var(--color-silver-chalice), var(--main-font), var(--font-size-desc1), var(--font-weight-4), var(--letter-spacing-desc1), var(--line-height-desc1))
+@mixin title-h4
+	@include create-style(var(--color-white), var(--sub-font), var(--font-size-h4), var(--font-weight-4), var(--letter-spacing-h4), var(--line-height-h4))
 
-@mixin desc-2
-	@include create-style(var(--color-silver-chalice), var(--main-font), var(--font-size-desc2), var(--font-weight-4), var(--letter-spacing-desc2), var(--line-height-desc2))
+@mixin title-h5
+	@include create-style(var(--color-white), var(--main-font), var(--font-size-h5), var(--font-weight-4), var(--letter-spacing-h5), var(--line-height-h5))
+
+@mixin sub-1
+	@include create-style(var(--color-white), var(--sub-font), var(--font-size-sub1), var(--font-weight-4), var(--letter-spacing-sub1), var(--line-height-sub1))
+
+@mixin sub-2
+	@include create-style(var(--color-white), var(--main-font), var(--font-size-sub2), var(--font-weight-4), var(--letter-spacing-sub2), var(--line-height-sub2))
+
+@mixin nav-text
+	@include create-style(var(--color-white), var(--main-font), var(--font-size-nav), var(--font-weight-4), var(--letter-spacing-nav), var(--line-height-nav))
+
+@mixin desc
+	@include create-style(var(--color-white), var(--text-font), var(--font-size-desc), var(--font-weight-4), var(--letter-spacing-desc), var(--line-height-desc))
 
 
 html, body, div, span, button,
 h1, h2, h3, h4, h5, h6, p, blockquote,
 a, small, strong, ul, li, form, label,
 article, footer, header, nav, section
-    &.center-text
-        text-align: center
+	&.center-text
+		text-align: center
 
-    &.left-text
-        text-align: left
+	&.left-text
+		text-align: left
 
-    &.right-text
-        text-align: right
+	&.right-text
+		text-align: right
 
-    &.cap-text
-        text-transform: capitalize
+	&.cap-text
+		text-transform: capitalize
 
-    &.up-text
-        text-transform: uppercase
+	&.up-text
+		text-transform: uppercase
 
-    &.low-text
-        text-transform: lowercase
+	&.low-text
+		text-transform: lowercase
 
-    &.title
-        @include title-h1
+	&.title-h1
+		@include title-h1
 
-    &.title-h2
-        @include title-h2
+	&.title-h2
+		@include title-h2
 
-    &.title-h3
-        @include title-h3
+	&.title-h3
+		@include title-h3
 
-    &.desc-1
-        @include desc-1
+	&.title-h4
+		@include title-h4
 
-    &.desc-2
-        @include desc-2
+	&.title-h5
+		@include title-h5
 
-    &::selection
-        color: var(--color-imperial-red)
-        background: none
-        text-shadow: none
+	&.sub-1
+		@include sub-1
+
+	&.sub-2
+		@include sub-2
+
+	&.nav-text
+		@include nav-text
+		
+	&.desc
+		@include desc
+
+	&::selection
+		color: var(--color-imperial-red)
+		background: none
+		text-shadow: none

@@ -1,1 +1,31 @@
-// Nothing here
+@import '../common/gem.scss'
+    
+.section__home
+    background-image: url('../../assets/img/home/background-home-desktop.jpg')
+    background-position: bottom
+    background-repeat: no-repeat
+    background-size: cover
+
+    .left-side
+        width: gem(450)
+
+    .explore-btn
+        &__link
+            display: flex
+        &__inner-circle
+            display: flex
+            justify-content: center
+            align-items: center
+            width: gem(274)
+            height: gem(274)
+            background-color: var(--color-white)
+            border-radius: 50%
+        &__title
+            letter-spacing: gem(2)
+            color: var(--color-black)
+
+    .contents
+        padding: gem(387) 0 gem(131)
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
