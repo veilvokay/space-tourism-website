@@ -5,8 +5,8 @@ const SVGO = require('svgo');
 const { extendDefaultPlugins } = SVGO;
 
 module.exports = {
-  plugins: extendDefaultPlugins([
-    { name: 'removeViewBox', active: false },
-    { name: 'collapseGroups', active: false },
-  ]),
+    plugins: extendDefaultPlugins([
+        { name: 'removeViewBox', active: false },
+        { name: 'collapseGroups', active: false },
+    ]),
 };

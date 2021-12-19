@@ -103,11 +103,6 @@ const plugins = () => {
     return base;
 };
 
-Object.keys(pages).reduce((config, page) => {
-    config[page] = `./scripts/${page}.ts`;
-    return config;
-}, {});
-
 module.exports = {
     context: Path.resolve(__dirname, 'app'),
     mode: 'development',
@@ -131,6 +126,10 @@ module.exports = {
     plugins: plugins(),
     module: {
         rules: [
+            {
+                test: /\.html$/i,
+                loader: 'html-loader',
+            },
             {
                 test: /\.css$|\.s[ac]ss$/,
                 resourceQuery: { not: [/inline/] },

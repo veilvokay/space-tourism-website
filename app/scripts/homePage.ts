@@ -1,4 +1,6 @@
 import 'styles/base';
 import 'styles/homePage/index';
 
-console.log('home');
+import runPage from './models/commonPage';
+
+runPage();
