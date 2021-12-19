@@ -1,0 +1,51 @@
+.header
+    padding-left: gem(55)
+    position: fixed
+    top: gem(40)
+    left: 0
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    z-index: 100
+
+    &__logo
+        display: flex
+    
+    .navbar
+        padding: gem(39) gem(165) gem(38) gem(123)
+        background: var(--color-white-04)
+        backdrop-filter: blur(gem(10))
+        
+        &__items
+            display: flex
+            gap: gem(48)
+        &__item
+            &--number
+                margin-right: gem(11)
+                display: inline-block
+                font-weight: 700
+            &--link
+                display: flex
+                position: relative
+                &.active
+                    &::after
+                        content: ''
+                        position: absolute
+                        left: 0
+                        bottom: gem(-38)
+                        width: 100%
+                        height: gem(3)
+                        background-color: var(--color-white)
+                        pointer-events: none
+
+        &::before
+            content: ''
+            position: absolute
+            top: 50%
+            left: gem(-443)
+            transform: translateY(-50%)
+            width: gem(473)
+            height: gem(1)
+            background-color: var(--color-white)
+            opacity: 0.25
