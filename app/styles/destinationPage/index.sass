@@ -1,0 +1,23 @@
+@import '../common/gem.scss'
+
+.tabs-wrapper
+    display: flex
+    justify-content: space-evenly
+    align-items: center
+    .tabs-1,
+    .tabs-2
+        display: flex
+        width: 50%
+        flex-basis: 50%
+        height: gem(400)
+        &.active-tab
+            background-color: pink
+
+    .tabs-1
+        background: red
+    .tabs-2
+        background: blue
+
+.tabs
+    li.active
+        color: yellow

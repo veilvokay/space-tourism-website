@@ -2,7 +2,9 @@ import { getEnumKeyByEnumValue } from 'app/utils/enumHelpers';
 
 export enum Pages {
     homePage = <any>'/',
-    crewPage = <any>'/crew-page.html',
+    destinationPage = <any>'/destination.html',
+    crewPage = <any>'/crew.html',
+    technologyPage = <any>'/technology.html',
 }
 
 export namespace Pages {

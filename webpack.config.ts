@@ -7,10 +7,14 @@ import CssMinimizerWebpackPlugin from 'css-minimizer-webpack-plugin';
 import TerserWebpackPlugin from 'terser-webpack-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 
+
 const pages = {
     homePage: 'index',
-    crewPilot: 'crew-pilot',
+    destinationPage: 'destination',
+    crewPage: 'crew',
+    technologyPage: 'technology',
 };
+
 
 const isProd = process.env.NODE_ENV === 'production';
 const isDev = process.env.NODE_ENV === 'development';
