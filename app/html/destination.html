@@ -8,7 +8,7 @@
   
   <title>Frontend Mentor | [Space tourism website - Destination]</title>
 </head>
-<body>
+<body class="preload">
 
     <header id="header" class="header">
 		<a href="/" class="header__logo">
@@ -46,7 +46,118 @@
 
     <main id="destinationPage" data-page-id="destinationPage">
 
-		
+		<section class="section__destination">
+			<div class="bg"></div>
+			<div class="container">
+				<div class="contents">
+					<h5 class="section__destination--title title-h5 up-text">
+						<span>01</span>Pick your destination
+					</h5>
+					<div class="tabs-section">
+						<div class="tabs-section__left planet-tab-contents">
+							<img src="../assets/img/destination/image-moon.png" alt="Moon" data-tabs-group="moon">
+							<img src="../assets/img/destination/image-mars.png" alt="Mars" data-tabs-group="mars">
+							<img src="../assets/img/destination/image-europa.png" alt="Europa" data-tabs-group="europa">
+							<img src="../assets/img/destination/image-titan.png" alt="Titan" data-tabs-group="titan">
+						</div>
+						<div class="tabs-section__right">
+							<ul class="tab-toggles__list up-text planet-names">
+								<li class="tab-toggles__item nav-text" data-toggle-tabs="moon">Moon</li>
+								<li class="tab-toggles__item nav-text" data-toggle-tabs="mars">Mars</li>
+								<li class="tab-toggles__item nav-text" data-toggle-tabs="europa">Europa</li>
+								<li class="tab-toggles__item nav-text" data-toggle-tabs="titan">Titan</li>
+							</ul>
+							<div class="tab-description planet-tab-contents">
+								<!-- MOON TAB -- START -->
+								<div class="tab" data-tabs-group="moon">
+									<h2 class="tab-description__title title-h2 up-text">
+										Moon
+									</h2>
+									<p class="tab-description__text desc">
+										See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.
+									</p>
+									<div class="tab-description__stats up-text">
+										<div class="stats-left">
+											<span class="sub-2">AVG. DISTANCE</span>
+											<span class="sub-1">384,400 km</span>
+										</div>
+										<div class="stats-right">
+											<span class="sub-2">Est. travel time</span>
+											<span class="sub-1">3 days</span>
+										</div>
+									</div>
+								</div>
+								<!-- MOON TAB -- END -->
+
+								<!-- MARS TAB -- START -->
+								<div class="tab" data-tabs-group="mars">
+									<h2 class="tab-description__title title-h2 up-text">
+										Mars
+									</h2>
+									<p class="tab-description__text desc">
+										Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!
+									</p>
+									<div class="tab-description__stats up-text">
+										<div class="stats-left">
+											<span class="sub-2">AVG. DISTANCE</span>
+											<span class="sub-1">225 MIL. km</span>
+										</div>
+										<div class="stats-right">
+											<span class="sub-2">Est. travel time</span>
+											<span class="sub-1">9 months</span>
+										</div>
+									</div>
+								</div>
+								<!-- MARS TAB -- END -->
+
+								<!-- EUROPA TAB -- START -->
+								<div class="tab" data-tabs-group="europa">
+									<h2 class="tab-description__title title-h2 up-text">
+										Europa
+									</h2>
+									<p class="tab-description__text desc">
+										The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.
+									</p>
+									<div class="tab-description__stats up-text">
+										<div class="stats-left">
+											<span class="sub-2">AVG. DISTANCE</span>
+											<span class="sub-1">628 MIL. km</span>
+										</div>
+										<div class="stats-right">
+											<span class="sub-2">Est. travel time</span>
+											<span class="sub-1">3 years</span>
+										</div>
+									</div>
+								</div>
+								<!-- EUROPA TAB -- END -->
+
+								<!-- TITAN TAB -- START -->
+								<div class="tab" data-tabs-group="titan">
+									<h2 class="tab-description__title title-h2 up-text">
+										Titan
+									</h2>
+									<p class="tab-description__text desc">
+										The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.
+									</p>
+									<div class="tab-description__stats up-text">
+										<div class="stats-left">
+											<span class="sub-2">AVG. DISTANCE</span>
+											<span class="sub-1">1.6 BIL. km</span>
+										</div>
+										<div class="stats-right">
+											<span class="sub-2">Est. travel time</span>
+											<span class="sub-1">7 years</span>
+										</div>
+									</div>
+								</div>
+								<!-- TITAN TAB -- END -->
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
     </main>
 

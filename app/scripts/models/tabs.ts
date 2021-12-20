@@ -30,3 +30,10 @@ export default function createTabs(togglesParenClass: string, tabContentsClass: 
 export const getTabContentByToggleTarget = (toggleTabsTarget: string): NodeListOf<HTMLElement> => {
     return document.querySelectorAll<HTMLElement>(`[data-tabs-group="${toggleTabsTarget}"]`);
 };
+
+export const setActiveTabByDefault = (toggleTabsTarget: string): void => {
+    const toggle: HTMLElement = document.querySelector<HTMLElement>(`[data-toggle-tabs="${toggleTabsTarget}"]`);
+    const contents: NodeListOf<HTMLElement> = document.querySelectorAll<HTMLElement>(`[data-tabs-group="${toggleTabsTarget}"]`);
+    toggle.classList.add('active');
+    contents.forEach(el => el.classList.add('active'));
+};

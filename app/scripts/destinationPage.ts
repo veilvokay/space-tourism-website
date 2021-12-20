@@ -1,11 +1,11 @@
 import 'styles/base';
 import 'styles/destinationPage/index';
 import runPage from './models/commonPage';
-import createTabs from './models/tabs';
+import createTabs, { setActiveTabByDefault } from './models/tabs';
 
 
 runPage();
 
-createTabs('tabs', 'tabs-wrapper');
-
+createTabs('planet-names', 'planet-tab-contents');
+setActiveTabByDefault('moon');
 
