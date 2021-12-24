@@ -7,6 +7,7 @@
     "dev": "cross-env NODE_ENV=development webpack serve --mode development",
     "build:dev": "cross-env NODE_ENV=development webpack --mode development",
     "build:prod": "cross-env NODE_ENV=production webpack --mode production",
+    "build:netlify:prod": "NODE_ENV=production webpack --mode production",
     "stats": "webpack --json > stats.json && webpack-bundle-analyzer stats.json"
   },
   "browserslist": "> 0.25%, not dead",
