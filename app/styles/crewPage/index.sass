@@ -1,0 +1,93 @@
+@import '../common/gem.scss'
+
+
+.section__crew
+    &--title
+        margin-bottom: gem(154)
+        span
+            margin-right: gem(28)
+            font-weight: var(--font-weight-7)
+            color: var(--color-white)
+            opacity: 0.25
+    .bg
+        background-image: url('assets/img/crew/background-crew-desktop.jpg')
+
+    .contents
+        padding: gem(212) 0 gem(94)
+
+    .tabs-section
+        &__left
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            width: gem(614)
+            height: gem(406)
+
+        &__right
+            .wrap__img
+                opacity: 0
+                height: auto
+                visibility: hidden
+                transition: opacity 0.5s ease
+                overflow: hidden
+                img
+                    position: absolute
+                    right: 0
+                    bottom: 0
+                &--douglas
+                    width: gem(568)
+                    // height: gem(712)
+                &--mark
+                    width: gem(453)
+                    // height: gem(654)
+                &--victor
+                    width: gem(554)
+                    // height: gem(681)
+                &--anousheh
+                    width: gem(616)
+                    // height: gem(607)
+                &.active
+                    opacity: 1
+                    visibility: visible
+
+        .tab-description
+            position: relative
+            &__position
+                margin-bottom: gem(16)
+                opacity: 0.5
+            &__title
+                margin-bottom: gem(27)
+            &__text
+                width: gem(444)
+                color: var(--color-purple)
+            
+            .tab
+                position: absolute
+                top: 0
+                left: 0
+                opacity: 0
+                pointer-events: none
+                visibility: hidden
+                transition: all 0.5s ease
+                &.active
+                    opacity: 1
+                    visibility: visible
+                    pointer-events: all
+        
+        .tab-toggles
+            &__list
+                display: flex
+                gap: gem(24)
+                
+            &__item
+                width: gem(15)
+                height: gem(15)
+                background-color: var(--color-white)
+                border-radius: 50%
+                opacity: 0.17
+                transition: all 0.5s ease
+                cursor: pointer
+                &:hover
+                    opacity: 0.5
+                &.active
+                    opacity: 1

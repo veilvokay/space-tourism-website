@@ -1,27 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Space tourism website - Crew]</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png">
+	
+	<title>Frontend Mentor | [Space tourism website - Crew]</title>
 </head>
 <body>
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
+	<header id="header" class="header">
+		<a href="/" class="header__logo">
+			<img src="../assets/img/st-logo.svg" alt="st-logo">
+		</a>
+		<nav class="navbar">
+			<ul class="navbar__items up-text">
+				<li class="navbar__item">
+					<a href="/" class="navbar__item--link nav-text nav-link-js">
+						<span class="navbar__item--number">00</span>home
+						<div class="underline"></div>
+					</a>
+				</li>
+				<li class="navbar__item">
+					<a href="/destination.html" class="navbar__item--link nav-text nav-link-js">
+						<span class="navbar__item--number">01</span>destination
+						<div class="underline"></div>
+					</a>
+				</li>
+				<li class="navbar__item">
+					<a href="/crew.html" class="navbar__item--link nav-text nav-link-js">
+						<span class="navbar__item--number">02</span>crew
+						<div class="underline"></div>
+					</a>
+				</li>
+				<li class="navbar__item">
+					<a href="/technology.html" class="navbar__item--link nav-text nav-link-js">
+						<span class="navbar__item--number">03</span>technology
+						<div class="underline"></div>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
 
-  02 Meet your crew
+	<main  id="crewPage" data-page-id="crewPage">
+		
+		<div class="section__crew">
+			<div class="bg"></div>
+			<div class="container">
+				<div class="contents">
 
-  Commander
-  Douglas Hurley
+					<h5 class="section__crew--title title-h5 up-text" style="margin: 0 0 153px 0;">
+						<span>02</span>Meet your crew
+					</h5>
 
-  Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 
-  and former NASA astronaut. He launched into space for the third time as 
-  commander of Crew Dragon Demo-2.
+					<div class="tabs-section">
+						<div class="tabs-section__left">
+							<div class="tab-description crew-tab-contents">
+
+								<!-- FIRST TAB -- START -->
+								<div class="tab" data-tabs-group="douglas">
+									<h4 class="tab-description__position title-h4 up-text">
+										Commander 
+									</h4>
+									<h2 class="tab-description__title title-h3 up-text">
+										Douglas Hurley
+									</h2>
+									<p class="tab-description__text desc">
+										Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.
+									</p>
+								</div>
+							<!-- FIRST TAB -- END -->
+
+							<!-- SECOND TAB -- START -->
+							<div class="tab" data-tabs-group="mark">
+								<h4 class="tab-description__position title-h4 up-text">
+									Mission Specialist 
+								</h4>
+								<h2 class="tab-description__title title-h3 up-text">
+									Mark Shuttleworth
+								</h2>
+								<p class="tab-description__text desc">
+									Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to travel to space as a space tourist.
+								</p>
+							</div>
+							<!-- SECOND TAB -- END -->
+
+							<!-- THIRD TAB -- START -->
+							<div class="tab" data-tabs-group="victor">
+								<h4 class="tab-description__position title-h4 up-text">
+									Pilot
+								</h4>
+								<h2 class="tab-description__title title-h3 up-text">
+									Victor Glover
+								</h2>
+								<p class="tab-description__text desc">
+									Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a station systems flight engineer. 
+								</p>
+							</div>
+							<!-- THIRD TAB -- END -->
+
+							<!-- FOURTH TAB -- START -->
+							<div class="tab" data-tabs-group="anousheh">
+								<h4 class="tab-description__position title-h4 up-text">
+									Flight Engineer 
+								</h4>
+								<h2 class="tab-description__title title-h3 up-text">
+									Anousheh Ansari
+								</h2>
+								<p class="tab-description__text desc">
+									Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space.
+								</p>
+							</div>
+							<!-- FOURTH TAB -- END -->
+
+							</div>
+							<ul class="tab-toggles__list up-text crew-names">
+								<li class="tab-toggles__item nav-text" data-toggle-tabs="douglas"></li>
+								<li class="tab-toggles__item nav-text" data-toggle-tabs="mark"></li>
+								<li class="tab-toggles__item nav-text" data-toggle-tabs="victor"></li>
+								<li class="tab-toggles__item nav-text" data-toggle-tabs="anousheh"></li>
+							</ul>
+						</div>
+						<div class="tabs-section__right crew-tab-contents">
+							<div class="wrap__img wrap__img--douglas" data-tabs-group="douglas">
+								<img src="../assets/img/crew/image-douglas-hurley.png" alt="Douglas Hurley" class="douglas">
+							</div>
+							<div class="wrap__img wrap__img--mark" data-tabs-group="mark">
+
+								<img src="../assets/img/crew/image-mark-shuttleworth.png" alt="Mark Shuttleworth" class="mark">
+							</div>
+							<div class="wrap__img wrap__img--victor">
+								<img src="../assets/img/crew/image-victor-glover.png" alt="Victor Glover" class="victor">
+							</div>
+							<div class="wrap__img wrap__img--anousheh" data-tabs-group="anousheh">
+								<img src="../assets/img/crew/image-anousheh-ansari.png" alt="Anousheh Ansari" class="anousheh">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</main>
+
 </body>
 </html>
